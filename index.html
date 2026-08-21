@@ -1,3 +1,4 @@
+#XRIYAN HUB
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -11,43 +12,52 @@
             background-color: #0f172a;
             color: #ffffff;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             margin: 0;
         }
-        h1 {
-            color: #38bdf8;
-            margin-top: 20px;
-        }
-        p {
-            color: #94a3b8;
-            font-size: 15px;
-        }
-        .btn-container {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
+        h1 { color: #38bdf8; margin-bottom: 5px; }
+        p { color: #94a3b8; font-size: 14px; margin-bottom: 25px; }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 12px;
         }
-        .btn {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            color: white;
-            padding: 14px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 15px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
         }
+        .card:hover { border-color: #38bdf8; transform: translateY(-2px); }
+        .card h3 { font-size: 14px; margin: 8px 0 0 0; color: #f8fafc; }
+        .icon { font-size: 30px; }
     </style>
 </head>
 <body>
 
     <h1>🎮 XRIYAN HUB</h1>
-    <p>Welcome to the ultimate Top-Up & Tournament Hub!</p>
+    <p>Select your game for instant top-up</p>
 
-    <div class="btn-container">
-        <a href="#" class="btn">💎 Instant Top-Up</a>
-        <a href="#" class="btn">🏆 MOBA Tournaments</a>
+    <div class="grid">
+        <div class="card" onclick="alert('MLBB Selected!')">
+            <div class="icon">💎</div>
+            <h3>Mobile Legends</h3>
+        </div>
+        <div class="card" onclick="alert('HoK Selected!')">
+            <div class="icon">👑</div>
+            <h3>Honor of Kings</h3>
+        </div>
+        <div class="card" onclick="alert('FF Selected!')">
+            <div class="icon">🔥</div>
+            <h3>Free Fire</h3>
+        </div>
+        <div class="card" onclick="alert('PUBG Selected!')">
+            <div class="icon">🪖</div>
+            <h3>PUBG Mobile</h3>
+        </div>
     </div>
 
     <script>
